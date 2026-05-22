@@ -1,12 +1,29 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../api/api";
+import { ProfileContext } from "../context/ProfileContext";
 
 export default function MovieDetail() {
   const { id } = useParams();
 
   const [movie, setMovie] = useState(null);
   const [trailer, setTrailer] = useState(null);
+
+  const { profile } = useContext(ProfileContext);
+
+  const addToWatchlist = async () => {
+    try {
+      await api.post("/watchlist", {
+        profileId: profile._id,
+        movieId: movie._id
+      });
+
+      alert("Agregado a watchlist");
+    } catch (error) {
+      console.log(error);
+      alert("Error al agregar");
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,6 +76,13 @@ export default function MovieDetail() {
       ) : (
         <p>No hay trailer disponible</p>
       )}
+
+      <button
+        onClick={addToWatchlist}
+        className="bg-green-500 text-white px-4 py-2 mb-4"
+      >
+        Agregar a Watchlist
+      </button>
     </div>
   );
 }

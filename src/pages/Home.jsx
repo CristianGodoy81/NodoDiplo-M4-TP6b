@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { api } from "../api/api";
 import { ProfileContext } from "../context/ProfileContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Home() {
     const [movies, setMovies] = useState([]);
@@ -35,6 +35,10 @@ export default function Home() {
     return (
         <div className="p-6">
             <h1 className="text-2xl mb-6">Catálogo</h1>
+
+            <Link to="/watchlist" className="underline">
+                Ver Watchlist
+            </Link>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 {movies.map((movie) => (
