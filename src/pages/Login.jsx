@@ -33,7 +33,7 @@ export default function Login() {
     <div className="min-h-screen bg-gray-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       {/* Encabezado Logo */}
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+        <h2 className="mt-6 text-center text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">
           Nodo🎬Cine
         </h2>
         <p className="mt-2 text-center text-sm text-gray-400">
