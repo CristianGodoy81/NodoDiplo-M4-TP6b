@@ -1,3 +1,5 @@
+# Netlify URL: https://nododiplo-m4-tp6b.netlify.app/
+
 # 🎬 Proyecto Full Stack - App de Películas (Frontend)
 
 Este proyecto es el Frontend de una aplicación web de películas (similar a plataformas de streaming), desarrollado con React y Vite. Permite a los usuarios registrarse, iniciar sesión, elegir perfiles, explorar películas en el inicio, ver el detalle de cada una, gestionar una lista de seguimiento (watchlist) y cuenta con un panel de administrador.
